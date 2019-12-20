@@ -9,10 +9,16 @@ namespace Secret_Santa.Actions
     {
         public void Start() 
         {
-            PersonCreate person = new PersonCreate();
-            person.CreatePerson();
-            ChooseGiftRecipient choose = new ChooseGiftRecipient();
-            choose.Choose();
+            while (true)
+            {
+                Console.WriteLine($"Welcome in the SS organization!");
+                PersonCreate person = new PersonCreate();
+                person.CreatePerson();
+                ChooseGiftRecipient choose = new ChooseGiftRecipient();
+                choose.Choose();
+                ShowRecipient show = new ShowRecipient();
+                show.ShowMan();
+            }            
         }
     }
 }
